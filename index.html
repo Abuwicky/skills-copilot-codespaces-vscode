@@ -4,32 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Copilot</title>
+    <style>
+        :root {
+            --logo-width-nav: 120px;
+            --logo-width-hero: min(280px, 70vw);
+            --logo-width-footer: 110px;
+            --brand-color: #111827;
+            --hero-color: #2563eb;
+            --page-bg: #ffffff;
+            --section-bg: #f8fafc;
+            --text-color: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--page-bg);
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        header,
+        footer {
+            padding: 1rem 1.5rem;
+            background: var(--section-bg);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        main {
+            padding: 3rem 1.5rem;
+        }
+
+        .hero {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: var(--section-bg);
+            border-radius: 20px;
+        }
+
+        .logo,
+        .hero-logo,
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo svg,
+        .hero-logo svg,
+        .footer-logo svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            max-width: var(--logo-width-nav);
+        }
+
+        .hero-logo {
+            max-width: var(--logo-width-hero);
+            margin: 0 auto 1rem;
+        }
+
+        .footer-logo {
+            max-width: var(--logo-width-footer);
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 1rem 0 0;
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        p {
+            margin: 0.75rem auto 0;
+            max-width: 48rem;
+            font-size: 1rem;
+            color: #4b5563;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <!-- Updated Navbar Logo -->
+        <nav aria-label="Main navigation">
             <div class="logo">
-                <svg aria-label="Abuwicky logo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-                    <text x="10%" y="20%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="black">Abuwicky</text>
+                <svg aria-label="Abuwicky logo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="34" font-weight="700" fill="var(--brand-color)">Abuwicky</text>
                 </svg>
             </div>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <!-- SVG Logo Block in Hero Section -->
-            <svg aria-label="Abuwicky logo in hero section" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-                <text x="10%" y="20%" dominant-baseline="middle" text-anchor="middle" font-size="40" fill="blue">Abuwicky</text>
-            </svg>
+            <div class="hero-logo">
+                <svg aria-label="Abuwicky logo in hero section" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="34" font-weight="700" fill="var(--hero-color)">Abuwicky</text>
+                </svg>
+            </div>
             <h1>Welcome to Skills Copilot</h1>
+            <p>A clean, responsive page with a consistent logo size across the header, hero, and footer.</p>
         </section>
     </main>
     <footer>
-        <!-- Updated Footer Logo -->
         <div class="footer-logo">
-            <svg aria-label="Abuwicky logo in footer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="black">Abuwicky</text>
+            <svg aria-label="Abuwicky logo in footer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="34" font-weight="700" fill="var(--brand-color)">Abuwicky</text>
             </svg>
         </div>
     </footer>
