@@ -1237,7 +1237,7 @@ button:focus-visible {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--dark-3);
+  color: var(--text-muted);
 }
 
 .form-group input:focus,

@@ -196,6 +196,12 @@
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
 
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   function showStatus(message, type) {
     if (!formStatus) return;
     formStatus.textContent = message;
@@ -243,7 +249,7 @@
 
       setTimeout(function () {
         showStatus(
-          'Thank you, ' + name + '! Your message has been sent. I\'ll get back to you soon.',
+          'Thank you, ' + escapeHtml(name) + '! Your message has been sent. I\'ll get back to you soon.',
           'success'
         );
         contactForm.reset();
